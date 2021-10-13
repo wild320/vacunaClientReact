@@ -12,10 +12,14 @@ import ModificarVacunas from '../pages/ModificarVacunas';
 import RegistrarVacunas from '../pages/RegistrarVacunas';
 import PaginaAdministrativa from '../pages/PaginaAdministrativa';
 import {RutaPrivada} from './RutaPrivada';
+import { Provider } from 'react-redux';
+import { store } from '../store';
 
 function App() {
+  
   return (
-    <BrowserRouter> 
+  <Provider store={store}>
+     <BrowserRouter> 
       <div>
         <Navegacion/>
       </div> 
@@ -32,6 +36,10 @@ function App() {
         </Switch>
       </Container>
     </BrowserRouter>
+
+  </Provider>
+  
+   
   );
 }
 

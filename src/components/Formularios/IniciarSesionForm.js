@@ -41,7 +41,7 @@ import {Form, Button} from "react-bootstrap";
                     {errores.password}
                 </Form.Control.Feedback>
             </Form.Group>
-
+            
             <Button type="submit" variant="primary" className="margen-t">
                 Iniciar sesión
             </Button>
