@@ -14,7 +14,9 @@ import PaginaAdministrativa from '../pages/PaginaAdministrativa';
 import {RutaPrivada} from './RutaPrivada';
 import { Provider } from 'react-redux';
 import { store } from '../store';
+import {comprobarToken} from '../connection/helpers/comprobarToken'
 
+comprobarToken()
 function App() {
   
   return (

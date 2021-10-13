@@ -1,17 +1,28 @@
-import React, {  useState } from 'react'
+import React, {  useState,useEffect } from 'react'
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap'
 import {isObjectoVacio} from '../connection/helpers/isObjectoVacio'
-import { Link} from 'react-router-dom'
+import { Link,useHistory} from 'react-router-dom'
 import  IniciarSesionForm  from '../components/Formularios/IniciarSesionForm';
 import validator from 'validator'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {loginUsuario} from '../connection/helpers/autenticacionAcciones'
 
 
-function IniciarSesion() {
+export default function IniciarSesion() {
 
     const [errores, setErrores]= useState({});
     const dispatch=useDispatch()
+    const conectado=useSelector(state=>state.auth.conectado)
+    const history=useHistory()
+
+    useEffect(() => {
+        if(conectado){
+            history.push("/")
+
+        }
+    })
+        
+        
 
     const login=({userName, password}) => {
         const errores={};
@@ -43,7 +54,7 @@ function IniciarSesion() {
             <Row>
                 <Col sm="12" md={{span:8, offset:2}} lg={{span:6, offset:3}} >
                     <Card body>
-                        {errores.auth && <Alert variant="danger">{errores.auth}</Alert>}
+                        {errores.autenticacion && <Alert variant="danger">{errores.autenticacion}</Alert>}
                         <h3>Iniciar sesión</h3> 
                         <IniciarSesionForm errores={errores} enviarCallback={login}></IniciarSesionForm>
                         <div className="margen-t">
@@ -55,4 +66,3 @@ function IniciarSesion() {
         </Container>
     )
 }
-export default IniciarSesion
