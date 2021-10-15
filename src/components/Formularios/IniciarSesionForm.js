@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Form, Button} from "react-bootstrap";
+import {Form, Button, Container} from "react-bootstrap";
 
  function IniciarSesionForm({errores, enviarCallback}) {
 
@@ -12,6 +12,7 @@ import {Form, Button} from "react-bootstrap";
     }
 
     return (
+        <Container>
         <Form onSubmit={enviarFormulario}>
             <Form.Group className="margen-t margen-b" controlId="userName">
                 <Form.Label>Usuario</Form.Label>
@@ -46,7 +47,8 @@ import {Form, Button} from "react-bootstrap";
                 Iniciar sesión
             </Button>
             <Form.Check type="checkbox" id="autoSizingCheck2" label="Recuerdame" />
-        </Form>        
+        </Form> 
+        </Container>       
     )
 }
 export default IniciarSesionForm

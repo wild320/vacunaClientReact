@@ -39,7 +39,7 @@ function RegistrarVacunasForm() {
           <Row>
             <Col md="6" xs="12">
               <Form.Group className="margen-t margen-b" controlId="fecha">
-                <Form.Label>Fecha</Form.Label>
+                <Form.Label>Fecha de Aplicacion</Form.Label>
                 <Form.Control type="date"></Form.Control>
               </Form.Group>
             </Col>

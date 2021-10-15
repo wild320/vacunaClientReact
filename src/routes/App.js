@@ -3,10 +3,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navegacion} from '../layouts/Navegacion'
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import MostrarVacunas from '../pages/MostrarVacunas';
 import IniciarSesion from '../pages/IniciarSesion';
-import CerrarSesion from '../pages/CerrarSesion';
 import CrearCuenta from '../pages/CrearCuenta';
 import ModificarVacunas from '../pages/ModificarVacunas';
 import RegistrarVacunas from '../pages/RegistrarVacunas';
@@ -31,12 +30,11 @@ function App() {
          <Navegacion/>
        </div>
    </Col>
-   <Col>
+   <Col  className="mt-5">
    <Container>
        <Switch>
          <Route exact path="/" component={MostrarVacunas}></Route>
          <Route exact path="/IniciarSesion" component={IniciarSesion}></Route>
-         <Route exact path="/CerrarSesion" component={CerrarSesion}></Route>
          <Route exact path="/CrearCuenta" component={CrearCuenta}></Route>
          <Route exact path="/MostrarVacunas" component={MostrarVacunas}></Route>
          <Route exact path="/ModificarVacunas" component={ModificarVacunas}></Route>

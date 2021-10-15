@@ -1,11 +1,9 @@
-import React from 'react'
+import MostrarVacunasCard from '../components/Formularios/MostrarVacunasCard'
 
-function ModificarVacunas() {
+
+export default function ModificarVacunas()  {
     return (
-        <div>
-            Modificar
-        </div>
+        MostrarVacunasCard()
     )
 }
 
-export default ModificarVacunas
