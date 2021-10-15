@@ -42,9 +42,10 @@ import {Form, Button} from "react-bootstrap";
                 </Form.Control.Feedback>
             </Form.Group>
             
-            <Button type="submit" variant="primary" className="margen-t">
+            <Button type="submit" variant="primary" className="mt-3">
                 Iniciar sesión
             </Button>
+            <Form.Check type="checkbox" id="autoSizingCheck2" label="Recuerdame" />
         </Form>        
     )
 }

@@ -15,8 +15,12 @@ import {RutaPrivada} from './RutaPrivada';
 import { Provider } from 'react-redux';
 import { store } from '../store';
 import {comprobarToken} from '../connection/helpers/comprobarToken'
+import moment from 'moment';
+import 'moment/locale/es'
 
+moment.locale('es')
 comprobarToken()
+
 function App() {
   
   return (
@@ -31,8 +35,9 @@ function App() {
           <Route exact path="/IniciarSesion" component={IniciarSesion}></Route>
           <Route exact path="/CerrarSesion" component={CerrarSesion}></Route>
           <Route exact path="/CrearCuenta" component={CrearCuenta}></Route>
-          <RutaPrivada path="/ModificarVacunas/ :id" component={ModificarVacunas}></RutaPrivada>
-          <RutaPrivada exact path="/RegistrarVacunas" component={RegistrarVacunas}></RutaPrivada>
+          <Route exact path="/MostrarVacunas" component={MostrarVacunas}></Route>
+          <Route exact path="/ModificarVacunas" component={ModificarVacunas}></Route>
+          <Route exact path="/RegistrarVacunas" component={RegistrarVacunas}></Route>
           <RutaPrivada exact path="/PaginaAdministrativa" component={PaginaAdministrativa}></RutaPrivada>
           
         </Switch>

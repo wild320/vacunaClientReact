@@ -74,7 +74,7 @@ export default function CrearCuentaForm({errores, enviarCallback}) {
                 </Form.Control.Feedback>
             </Form.Group>
 
-            <Button type="submit" variant="primary" className="margen-t">
+            <Button type="submit" variant="primary" className="mt-3">
                Crear usuario
             </Button>
         </Form>        

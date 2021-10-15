@@ -1,10 +1,11 @@
-import React from 'react'
+import RegistrarVacunasForm from "../components/Formularios/RegistrarVacunasForm"
+
 
 function RegistrarVacunas() {
+
+
     return (
-        <div>
-            Registar vacuna
-        </div>
+        RegistrarVacunasForm
     )
 }
 
