@@ -1,10 +1,11 @@
 import React from 'react'
-import { Table } from 'react-bootstrap'
+import { Container, Table } from 'react-bootstrap'
 
 
 function MostrarVacunasCard() {
     return (
-      <Table striped bordered hover variant="dark">
+      <Container>
+         <Table striped bordered hover variant="dark">
         <thead>
         <tr>
           <th scope="col">#</th>
@@ -35,6 +36,9 @@ function MostrarVacunasCard() {
       </tbody>
   
 </Table>
+
+      </Container>
+     
     )
 }
 

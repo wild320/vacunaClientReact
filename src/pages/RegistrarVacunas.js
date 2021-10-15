@@ -1,12 +1,13 @@
-import RegistrarVacunasForm from "../components/Formularios/RegistrarVacunasForm"
+
+import RegistrarVacunasForm from '../components/Formularios/RegistrarVacunasForm'
 
 
-function RegistrarVacunas() {
+export default function RegistrarVacunas() {
 
 
     return (
-        RegistrarVacunasForm
+
+        RegistrarVacunasForm()
+
     )
 }
-
-export default RegistrarVacunas
