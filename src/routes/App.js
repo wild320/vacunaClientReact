@@ -24,27 +24,32 @@ comprobarToken()
 function App() {
   
   return (
-  <Provider store={store}>
-     <BrowserRouter> 
-      <div>
-        <Navegacion/>
-      </div> 
-      <Container>
-        <Switch>
-          <Route exact path="/" component={MostrarVacunas}></Route>
-          <Route exact path="/IniciarSesion" component={IniciarSesion}></Route>
-          <Route exact path="/CerrarSesion" component={CerrarSesion}></Route>
-          <Route exact path="/CrearCuenta" component={CrearCuenta}></Route>
-          <Route exact path="/MostrarVacunas" component={MostrarVacunas}></Route>
-          <Route exact path="/ModificarVacunas" component={ModificarVacunas}></Route>
-          <Route exact path="/RegistrarVacunas" component={RegistrarVacunas}></Route>
-          <RutaPrivada exact path="/PaginaAdministrativa" component={PaginaAdministrativa}></RutaPrivada>
-          
-        </Switch>
-      </Container>
-    </BrowserRouter>
+    <Provider store={store}>
+    <BrowserRouter> 
+    <Row>
+   <Col md="auto"><div>
+         <Navegacion/>
+       </div>
+   </Col>
+   <Col>
+   <Container>
+       <Switch>
+         <Route exact path="/" component={MostrarVacunas}></Route>
+         <Route exact path="/IniciarSesion" component={IniciarSesion}></Route>
+         <Route exact path="/CerrarSesion" component={CerrarSesion}></Route>
+         <Route exact path="/CrearCuenta" component={CrearCuenta}></Route>
+         <Route exact path="/MostrarVacunas" component={MostrarVacunas}></Route>
+         <Route exact path="/ModificarVacunas" component={ModificarVacunas}></Route>
+         <Route exact path="/RegistrarVacunas" component={RegistrarVacunas}></Route>
+         <RutaPrivada exact path="/PaginaAdministrativa" component={PaginaAdministrativa}></RutaPrivada>          
+       </Switch>
+     </Container>
+   </Col>
+ </Row>    
+     
+   </BrowserRouter>
 
-  </Provider>
+ </Provider>
   
    
   );
